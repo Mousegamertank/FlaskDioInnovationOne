@@ -52,7 +52,8 @@ class ListDevelopers(Resource):
 
 api.add_resource(Developer, '/dev/<int:id>')
 api.add_resource(ListDevelopers, '/dev/')
-api.add_resource(Habilidades, '/habilidades')
+api.add_resource(ListaHabilidades, '/habilidades')
+api.add_resource(Habilidades, '/habilidades/<int:id>')
 
 if __name__ == "__main__":
     app.run(debug=True)
