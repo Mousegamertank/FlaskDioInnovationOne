@@ -18,18 +18,18 @@ class ListaHabilidades(Resource):
         return habilidades
 
 class Habilidades(Resource):
-    def get(id):
+    def get(self, id):
         try:
             return habilidades[id]
         except:
             return {'message': 'Dont exist the id'}
 
-    def put(id):
+    def put(self, id):
         data = json.loads(request.data)
         habilidade[id] = data
         return habilidade[id]
 
-    def delete(id):
+    def delete(self, id):
         habilidades.pop(id)
         try:
             mensagem = 'success'
